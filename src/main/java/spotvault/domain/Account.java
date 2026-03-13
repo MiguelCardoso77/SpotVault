@@ -35,23 +35,23 @@ public class Account {
     public Account(String email, String username, String tier, String status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.accountId = UUID.randomUUID();
 
-        this.email = email;
         Guards.guardAgainstNull(email, "Email");
+        this.email = email;
 
-        this.username = username;
         Guards.guardAgainstNull(username, "Username");
+        this.username = username;
 
-        this.tier = tier;
         Guards.guardAgainstNull(tier, "Tier");
+        this.tier = tier;
 
-        this.status = status;
         Guards.guardAgainstNull(status, "Status");
+        this.status = status;
 
-        this.createdAt = createdAt;
         Guards.guardAgainstValidLocalDateTime(createdAt, "CreatedAt");
+        this.createdAt = createdAt;
 
-        this.updatedAt = updatedAt;
         Guards.guardAgainstValidLocalDateTime(updatedAt, "UpdatedAt");
+        this.updatedAt = updatedAt;
     }
 
     protected Account() { }
