@@ -5,38 +5,22 @@ out/
 .kotlin
 .idea/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
 
-### Builds ###
-SpotVault-BackEnd/target
-
-### Local dev secrets ###
-.env
-application-local.properties
-
 ### Claude ###
 .claude/
 CLAUDE.md
+
+### BackEnd ###
+SpotVault-BackEnd/target
+SpotVault-BackEnd/.env
+
+### FrontEnd ###
+SpotVault-FrontEnd/node_modules
+SpotVault-FrontEnd/.expo
+SpotVault-FrontEnd/dist
+SpotVault-FrontEnd/expo-env.d.ts
