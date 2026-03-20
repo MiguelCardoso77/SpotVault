@@ -17,16 +17,16 @@ export default function TabLayout() {
                 tabBarButton: HapticTab,
             }}>
             <Tabs.Screen
-                name="index"
+                name="Home"
                 options={{
                     title: 'Home',
                     tabBarIcon: ({color}) => <IconSymbol size={28} name="house.fill" color={color}/>,
                 }}
             />
             <Tabs.Screen
-                name="explore"
+                name="Profile"
                 options={{
-                    title: 'Explore',
+                    title: 'Profile',
                     tabBarIcon: ({color}) => <IconSymbol size={28} name="paperplane.fill" color={color}/>,
                 }}
             />
