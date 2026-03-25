@@ -63,7 +63,7 @@ export default function NavigationBar() {
               key={tab.key}
               style={styles.createWrap}
               activeOpacity={0.85}
-              onPress={() => tab.route && router.replace(tab.route as any)}
+              onPress={() => tab.route && router.navigate(tab.route as any)}
             >
               <View style={styles.createBtn}>
                 <MaterialIcons name="add" size={width * 0.075} color="#fff" />
@@ -79,7 +79,7 @@ export default function NavigationBar() {
             activeOpacity={tab.ready ? 0.7 : 1}
             onPress={() => {
               if (!tab.ready || !tab.route || isActive) return;
-              router.replace(tab.route as any);
+              router.navigate(tab.route as any);
             }}
           >
             <MaterialIcons name={tab.icon} size={width * 0.058} color={color} />
