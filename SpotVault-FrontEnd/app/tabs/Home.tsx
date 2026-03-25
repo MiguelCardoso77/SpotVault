@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 // ── Paste your Mapbox public token here ──────────────────────────────────────
-export const MAPBOX_TOKEN = process.env.EXPO_PUBLIC_MAPBOX_TOKEN ?? '';
+export const MAPBOX_TOKEN = 'x';
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type Spot = {
