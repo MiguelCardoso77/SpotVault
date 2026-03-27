@@ -12,6 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import CreateListButton from '@/components/CreateListButton';
 
 const { width, height } = Dimensions.get('window');
 const TINT = '#0a7ea4';
@@ -197,7 +198,9 @@ export default function ListsScreen() {
             Your travel collections.
           </Text>
 
-          {/* Stat pills */}
+          {/* Create button + stat pills */}
+          <CreateListButton onCreated={(list) => console.log('Created:', list)} />
+
           <View style={styles.statsRow}>
             <View style={[styles.statPill, { backgroundColor: pillBg, borderColor: pillBorder }]}>
               <MaterialIcons name="folder" size={hp(3.5)} color={TINT} />

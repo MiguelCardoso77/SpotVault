@@ -21,7 +21,7 @@ public class Spot {
     @Column()
     private String description;
 
-    @Column(columnDefinition = "geography(Point, 4326)", nullable = false)
+    @Column(nullable = false)
     private Point location;
 
     @Column(nullable = false, updatable = false)
@@ -49,4 +49,6 @@ public class Spot {
     }
 
     protected Spot() { }
+
+    public UUID getSpotId() { return spotId; }
 }

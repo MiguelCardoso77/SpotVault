@@ -32,6 +32,28 @@ public class Account {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
+    public Account(UUID accountId, String email, String username, String tier, String status, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.accountId = accountId;
+
+        Guards.guardAgainstNull(email, "Email");
+        this.email = email;
+
+        Guards.guardAgainstNull(username, "Username");
+        this.username = username;
+
+        Guards.guardAgainstNull(tier, "Tier");
+        this.tier = tier;
+
+        Guards.guardAgainstNull(status, "Status");
+        this.status = status;
+
+        Guards.guardAgainstValidLocalDateTime(createdAt, "CreatedAt");
+        this.createdAt = createdAt;
+
+        Guards.guardAgainstValidLocalDateTime(updatedAt, "UpdatedAt");
+        this.updatedAt = updatedAt;
+    }
+
     public Account(String email, String username, String tier, String status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.accountId = UUID.randomUUID();
 
@@ -55,4 +77,6 @@ public class Account {
     }
 
     protected Account() { }
+
+    public UUID getAccountId() { return accountId; }
 }
